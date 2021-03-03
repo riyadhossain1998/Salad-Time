@@ -1,4 +1,5 @@
 function salad() {
+    init();
     var greens = ["Lettuce", "Spinach", "Kale", "Mix"];
     var proteins = ["Salmon", "Tuna", "Shrimp", "Chicken", "Turkey", "Tofu", "Boiled Eggs", "Soy Bean Protein"];
     var toppings = ["Walnuts", "Almonds", "Apples", "Broccoli", "Carrots", "Chickpeas", "Croutons",  

@@ -4,7 +4,7 @@ function init() {
     //console.log(document.querySelector("#bowlID").style.padding);
     var canvas = document.getElementById('canvas');
     var canvasCtx = canvas.getContext('2d');
-    var bowl = document.getElementById('bowl');
+    //var bowl = document.getElementById('bowl');
     //var bowlCtx = bowl.getElementById('2d');
 
     var analyser = audioContext.createAnalyser();
@@ -39,21 +39,23 @@ function init() {
         var checkAudio = function() {
             analyser.getByteFrequencyData(freqBinDataArray);
 
-            console.log('Volume: ' + getRMS(freqBinDataArray));
-            console.log('Freq Bin: ' + getIndexOfMax(freqBinDataArray));
+    
+            document.getElementById("vol").innerHTML = 'Volume: ' + getRMS(freqBinDataArray);
+            document.getElementById("freq").innerHTML = 'Freq Bin: ' + getIndexOfMax(freqBinDataArray);
             //console.log(freqBinDataArray);
         }
 
         setInterval(checkAudio, 64);
+        draw();
     }
 
     var bLength = analyser.frequencyBinCount;
     var dataArray = new Uint8Array(bLength);
     
-    //canvasCtx.clearRect(0, 0, 250, 250);
+    canvasCtx.clearRect(0, 0, 250, 250);
 
     function draw() {
-        /*
+        
         var drawVisual = requestAnimationFrame(draw);
         analyser.getByteTimeDomainData(dataArray);
         
@@ -67,9 +69,13 @@ function init() {
         var sliceWidth = 250 * 1.0 / bLength;
         var x = 0;
 
+        
+
         for(var i = 0; i < bLength; i++) {
             var v = dataArray[i] / 128.0;
             var y = v * 250/2;
+
+            document.getElementById("vval").innerHTML = "val1: " + v + "\nval2: " + y;
 
             if (i == 0) {
                 canvasCtx.moveTo(x, y);
@@ -83,7 +89,7 @@ function init() {
         }
         canvasCtx.lineTo(canvas.width, canvas.height/2);
         canvasCtx.stroke();
-        */
+        
        if (bowl.getContext) {
         var ctx = bowl.getContext('2d');
         bowl.width = window.innerWidth-30;
@@ -101,7 +107,7 @@ function init() {
         
       }
     };
-    draw();
+   
     
 }
 
