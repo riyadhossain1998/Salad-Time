@@ -1,5 +1,7 @@
 body {
     background-color: #BAFF29;
+    font-family: 'Balsamiq Sans', cursive;
+    background-image: url("../img/background.png");
 }
 
 .dropdown-toggle {
