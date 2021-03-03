@@ -1,0 +1,31 @@
+{
+    "vegetables": [
+        {
+            "name": "Lettuce",
+            "calories": "5",
+            "category": "Greens",
+            "servings": "1"
+        },
+        {
+            "name": "Spring Mix",
+            "calories": "8",
+            "category": "greens",
+            "servings": "1"
+        },
+        {
+            "name": "Tomatoes",
+            "calories": "8",
+            "category": "Greens",
+            "servings": "1"
+        },
+    ],
+
+    "dressing": [
+        {
+            "name": "Olive Oil",
+            "calories": "",
+            "category": "Oil",
+            "servings": ""
+        }
+    ]
+}

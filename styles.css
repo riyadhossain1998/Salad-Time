@@ -1,0 +1,74 @@
+body {
+    background-color: #BAFF29;
+}
+
+.dropdown-toggle {
+    background-color: #E87461;
+    color: white;
+    border: 3px solid white;
+}
+
+.checkbox-xl .custom-control-label::before, 
+.checkbox-xl .custom-control-label::after {
+  top: 1.2rem;
+  width: 1.85rem;
+  height: 1.85rem;
+  
+}
+.sing {
+    background-color: #E87461;
+}
+.checkbox-xl .custom-control-label {
+  padding-top: 23px;
+  padding-left: 10px;
+}
+
+.justify-content-center .dropdown-menu {
+    left: 50%;
+    transform: translateX(-50%);
+ }
+/*
+#go {
+    background: #15a7ffb3;
+    width: 96px;
+    height: 32px;
+    margin: 32px auto 0;
+
+    text-align: center;
+    line-height: 32px;
+    border-radius: 2px;
+
+    box-shadow: 0 2px 5px #0007;
+    cursor: pointer;
+}
+
+#go.active {
+    background: #d30;
+    box-shadow: none;
+}
+
+#graph {
+    margin: 16px auto;
+}
+
+#graph span {
+    display: block;
+    width: 830px;
+    height: 14px;
+    margin: -14px auto 0;
+    font-size: 11px;
+    text-transform: capitalize;
+    color: #fff9;
+    position: relative;
+    top: 20px;
+    left: 4px;
+}
+
+#graph canvas {
+    display: block;
+    background: #0004;
+    margin: 0 auto;
+    padding: 10px 20px;
+}
+
+*/
