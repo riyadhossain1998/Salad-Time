@@ -179,33 +179,24 @@ function selectTopping(vol) {
 
 function selectDressing(freq) {
     
-    var rando = randomNumberGenerator(freq);
-    console.log(freq)
-    console.log(rando)
-    var dWeight = 100/dressing.length;
-    var vWeight = 100/vinaigrette.length;
-
-
-    var dProb = 100*(rando/freq); 
-    var vProb = 100*(rando/freq);
-
-
-
-    if(preference["greens"] == "Lettuce" || preference["greens"] == "Cabbage") { 
-        for(var i = 0; i < dressing.length; i++) {
-            if(dProb < dWeight*(i+1)) {
-                preference["dressing"] = dressing[i];
-            }
+    var num;
+    if(preference["greens"][0] == "Lettuce" || preference["greens"][1] == "Cabbage") { 
+        if(freq < dressing.length) {
+            num = Math.floor(freq)
         }
-        
+        else {
+            num = Math.floor(Math.random() * dressing.length)
+        }
+        preference["dressing"] = dressing[num];
     }
     else {
-        for(var i = 0; i < vinaigrette.length; i++) {
-            if(vProb < vWeight*(i+1)) {
-                preference["dressing"] = vinaigrette[i];
-            }
+        if(freq < vinaigrette.length) {
+            num = Math.floor(freq);    
         }
-        
+        else {
+            num = Math.floor(Math.random() * vinaigrette.length)
+        }    
+        preference["dressing"] = vinaigrette[num];
     }
     console.log(preference);
     displayRecipe();
@@ -222,9 +213,7 @@ function randomNumberGenerator(volume) {
     return (Math.floor(Math.random() * volume));
 }
 
-function randomPercentageGenerator() {
-    return(Math.floor(Math.random() * 100));
-}
+
 
 function displayRecipe() {
     var display = "Start off with some <b>";

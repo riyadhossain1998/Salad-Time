@@ -85,13 +85,12 @@ function init() {
                 clearInterval(checkAudio);
                 
                 document.getElementById("time").style.display = "none";
-                document.getElementById("displayText").style.display = "none";
                 selectGreen(modeRMS(rmsList));
                 selectProtein(median(rmsList));
                 selectTopping(rmsList[randomNumberGenerator(rmsList.length)-1])
                 selectTopping(rmsList[randomNumberGenerator(rmsList.length)-1])
                 selectTopping(rmsList[randomNumberGenerator(rmsList.length)-1])
-                selectDressing(median(freqList));
+                selectDressing(avgRMS(freqList));
                 
                 analyser = null;
                 audioContext = null;
